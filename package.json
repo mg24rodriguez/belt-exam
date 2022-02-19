@@ -1,25 +1,18 @@
 {
-  "name": "belt-exam",
+  "name": "my-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mg24rodriguez/belt-exam.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mg24rodriguez/belt-exam/issues"
-  },
-  "homepage": "https://github.com/mg24rodriguez/belt-exam#readme",
   "dependencies": {
+    "@reach/router": "^1.3.4",
     "cors": "^2.8.5",
-    "express": "^4.17.3",
-    "mongoose": "^6.2.2"
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1"
   }
 }
