@@ -11,32 +11,36 @@ export default function PersonList (props) {
                 removeFromDom(personId)
             })
     }
+    
     return(
         
         <div className="container">
-            {props.people.map((person, idx) => {
-                return <p key={idx}>
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <td><Link to={"/people/" + person._id}> <h5> {person.firstName} </h5> </Link></td>
+            <table className="table">
+                <tbody>               
+                    {props.people.map((person, idx) => {
+                        return <tr key={idx}>
+                            <td><Link to={"/people/" + person._id}> <h5> {person.firstName} </h5> </Link></td>
                                 <td>{person.lastName}</td>
                                 <td>{person.price}</td>
                                 <td>
-                                    <Link to={"/people/" + person._id + "/edit"} type="button" className="btn btn-light">
-                                        Edit
+                                    <Link to={"/people/" + person._id} type="button" className="btn btn-info">
+                                        🐾 &nbsp; Detail
                                     </Link>
                                 </td>
                                 <td>
-                                    <button onClick={(e)=>{deletePerson(person._id)}} type="button" className="btn btn-danger">
-                                        Delete
-                                    </button>  
-                                </td>    
-                            </tr>        
-                        </tbody>
-                    </table>
-                </p>
-            })}
+                                    <Link to={"/people/" + person._id + "/edit"} type="button" className="btn btn-light">
+                                        ✏️ &nbsp; Edit
+                                    </Link>
+                                </td>
+                                <td>
+                                <button onClick={(e)=>{deletePerson(person._id)}} type="button" className="btn btn-danger">
+                                    🏠 &nbsp; Adopted
+                                </button>  
+                            </td>    
+                        </tr>        
+                    })}
+            </tbody>
+            </table>
         </div>
     )
 }
